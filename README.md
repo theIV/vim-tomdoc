@@ -11,7 +11,7 @@ Some helper functions to add TomDoc templates to your Ruby code.
 
 ## What I have so far
 
-  function! TomDocize()
-    let lineNumber = search('def', 'b')
-    exec ":" . lineNumber - 1 . "r~/tomdoc.txt"                                                                    
-  endfunction
+    function! TomDocize()
+      let lineNumber = search('def', 'b')
+      exec ":" . lineNumber - 1 . "r~/tomdoc.txt"                                                                    
+    endfunction
