@@ -11,30 +11,37 @@ let s:templates_dir = expand("<sfile>:p:h") . "/../templates/"
 function! TomDocMethod()
   let lineNumber = search('def', 'b') - 1
   exec ":" . lineNumber . "r" . s:templates_dir . "method.txt"
+  silent norm! '[=']
 endfunction
 
 function! TomDocClass()
   let lineNumber = search('class', 'b') - 1
   exec ":" . lineNumber . "r" . s:templates_dir . "class-or-module.txt"
+  silent norm! '[=']
 endfunction
 
 function! TomDocModule()
   let lineNumber = search('module', 'b') - 1
   exec ":" . lineNumber . "r" . s:templates_dir . "class-or-module.txt"
+  silent norm! '[=']
 endfunction
 
 function! TomDocConstant()
   exec ":-1r" . s:templates_dir . "constant.txt"
+  silent norm! '[=']
 endfunction
 
 function! TomDocAttrReader()
   exec ":-1r" . s:templates_dir . "attr_reader.txt"
+  silent norm! '[=']
 endfunction
 
 function! TomDocAttrWriter()
   exec ":-1r" . s:templates_dir . "attr_writer.txt"
+  silent norm! '[=']
 endfunction
 
 function! TomDocAttrAccessor()
   exec ":-1r" . s:templates_dir . "attr_accessor.txt"
+  silent norm! '[=']
 endfunction
